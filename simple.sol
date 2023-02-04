@@ -13,6 +13,7 @@ contract Simplestorage {
         string name;
         uint256 favno;
     }
+    
     // People public person = People({favno: 7, name: "Kshitiz"});
 
     People[] public peopl;
