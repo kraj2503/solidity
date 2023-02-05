@@ -2,7 +2,7 @@
 
 pragma solidity ^0.6.0;
 
-contract Simplestorage {
+contract SimpleStorage {
     uint256 favno;
     bool favbool;
         int256 op;
@@ -13,7 +13,6 @@ contract Simplestorage {
         string name;
         uint256 favno;
     }
-    
     // People public person = People({favno: 7, name: "Kshitiz"});
 
     People[] public peopl;
@@ -27,9 +26,9 @@ contract Simplestorage {
     name = "ksj";
     }
 
-    // function retrive() public view returns (uint256,int256,string memory){
-    //     return (favno,op,name);
-    // }
+    function retrive() public view returns (uint256){
+        return (favno);
+    }
 
 
     //  function retrie() public view returns (string memory) {
