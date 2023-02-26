@@ -25,6 +25,5 @@ with open("compiled_code.json","w") as file:
 bytecode = compiled_sol["contracts"]["simpleStorage.sol"]["SimpleStorage"]["evm"]["bytecode"]["object"]
 
 # get ABI
-
 abi = compiled_sol["contracts"]["simpleStorage.sol"]["SimpleStorage"]["abi"]
 print(abi)
