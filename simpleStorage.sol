@@ -1,45 +1,30 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.6.0;
+pragma solidity >=0.6.0 <0.9.0;
 
 contract SimpleStorage {
-    uint256 favno;
-    bool favbool;
-        int256 op;
-        string name;
-    // bool favbool2;
 
+    uint256 favoriteNumber;
+
+    // This is a comment!
     struct People {
+        uint256 favoriteNumber;
         string name;
-        uint256 favno;
-    }
-    // People public person = People({favno: 7, name: "Kshitiz"});
-
-    People[] public peopl;
-    mapping(string =>uint256)public nameTofavno;
-
-    address fav = 0xA44c7b5B7dEb84209855E62e460C7F0e884F5887;
-
-    function store(uint _favno) public {
-        favno =_favno;
-    op = 10;
-    name = "ksj";
     }
 
-    function retrive() public view returns (uint256){
-        return (favno);
+    People[] public people;
+    mapping(string => uint256) public nameToFavoriteNumber;
+
+    function store(uint256 _favoriteNumber) public {
+        favoriteNumber = _favoriteNumber;
+    }
+    
+    function retrieve() public view returns (uint256){
+        return favoriteNumber;
     }
 
-
-    //  function retrie() public view returns (string memory) {
-    //     return name;
-    // }
-
-    //  function retrve() public view returns (int256) {
-    //     return op ;
-    // }
-    function addPerson(string memory _name, uint256 _favno) public {
-        peopl.push(People({favno: _favno, name: _name}));
-        nameTofavno[_name]=_favno;
+    function addPerson(string memory _name, uint256 _favoriteNumber) public {
+        people.push(People(_favoriteNumber, _name));
+        nameToFavoriteNumber[_name] = _favoriteNumber;
     }
 }
