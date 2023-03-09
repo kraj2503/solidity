@@ -49,8 +49,8 @@ abi = json.loads(
 # chain_id = 4
 #
 # For connecting to ganache
-w3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:7545"))
-chain_id = 1337
+w3 = Web3(Web3.HTTPProvider("https://goerli.infura.io/v3/67ba585c568b45ebbc2ec619a328fa8a"))
+chain_id = 5 
 
 # if chain_id == 4:
 #     w3.middleware_onion.inject(geth_poa_middleware, layer=0)
@@ -58,8 +58,8 @@ chain_id = 1337
 #Added print statement to ensure connection suceeded as per
 #https://web3py.readthedocs.io/en/stable/middleware.html#geth-style-proof-of-authority
 
-my_address = "0x07C819419320Bc8F824416524B654fA76f4c363e"
-private_key = "0xf05359886e9fae8a9d8cde11e74e868bbb79b2b94d2a0de46e19c600636acc31"
+my_address = "0xA44c7b5B7dEb84209855E62e460C7F0e884F5887"
+private_key = "0xb92475ac3638b965ca9d700f2929a186da7b39ee16911d4b2c3b38414c9bb212"
 
 # Create the contract in Python
 SimpleStorage = w3.eth.contract(abi=abi, bytecode=bytecode)
